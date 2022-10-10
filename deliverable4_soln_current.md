@@ -39,7 +39,7 @@ for t in range(max_t-1):
     I_to_R = gamma * I[t]
     S.append(S[t] - S_to_I)
     I.append(I[t] + S_to_I - I_to_R)
-    R.append(S[t] + I_to_R) 
+    R.append(R[t] + I_to_R) 
 ```
 
 #### Part(a)
@@ -434,13 +434,13 @@ df = df.drop(["From station name", "To station name"], axis = 1)
 df.groupby([df["alpha_first"],df["alpha_second"]]).value_counts().sort_values(ascending=False)
 ```
 
-    C:\Users\afarahat\AppData\Local\Temp\ipykernel_29680\3233856748.py:5: SettingWithCopyWarning: 
+    C:\Users\afarahat\AppData\Local\Temp\ipykernel_10592\3233856748.py:5: SettingWithCopyWarning: 
     A value is trying to be set on a copy of a slice from a DataFrame.
     Try using .loc[row_indexer,col_indexer] = value instead
     
     See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
       df["alpha_first"] = df.apply(lambda x: min(str(x["From station name"]), str(x["To station name"])),
-    C:\Users\afarahat\AppData\Local\Temp\ipykernel_29680\3233856748.py:8: SettingWithCopyWarning: 
+    C:\Users\afarahat\AppData\Local\Temp\ipykernel_10592\3233856748.py:8: SettingWithCopyWarning: 
     A value is trying to be set on a copy of a slice from a DataFrame.
     Try using .loc[row_indexer,col_indexer] = value instead
     
